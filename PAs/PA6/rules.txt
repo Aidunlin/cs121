@@ -1,0 +1,9 @@
+BATTLESHIP RULES
+
+Be the first to sink all of your opponent's ships!
+
+You and your computer will be placing ships of different sizes on separate ocean grids (boards).
+
+You'll alternate turns with your computer, choosing one shot per turn to try to hit each other's ships.
+
+When every cell of a ship has been hit, that ship will sink.

@@ -1,0 +1,11 @@
+Rules:
+
+You roll two dice until you win or lose.
+
+On the first roll:
+- You win if you roll 7 or 11.
+- You lose if you roll 2, 3, or 12 (called 'craps').
+
+On subsequent rolls:
+- You win if you roll your previous roll.
+- You lose if you roll a 7.

@@ -1,0 +1,39 @@
+Yahtzee is a dice game that was invented by Milton Bradley and Edwin S. Lowe in 1956.
+The challenge of the game is to outduel the other player by scoring the most points.
+
+Points are obtained by rolling 5 6-sided dice across thirteen rounds.
+During each round, each player may roll the dice up to 3 times to make one of the scoring combinations.
+Once a combination has been achieved by the player, it may not be used again in future rounds,
+except for the Yahtzee combination may be used as many times as the player makes the combination.
+
+Each scoring combination has different point totals.
+Some of these totals are achieved through the accumulation of points across rolls,
+and some are obtained as fixed sequences of values.
+
+The scorecard used for Yahtzee is composed of 2 sections: an upper and a lower section.
+A total of 13 boxes or 13 scoring combinations are divided amongst the sections.
+
+The upper section consists of boxes that are scored by summing the value of the dice matching the faces of the box.
+If a player rolls 4 3's, then the score placed in the 3's box is the sum of the dice which is 12.
+Once a player has chosen to score a box,
+it may not be changed and the combination is no longer in play for future rounds.
+If the sum of the scores in the upper section is >= 63,
+then 35 points are added to the player's overall score as a bonus.
+
+The lower section contains a number of poker-like combinations:
+
+Name               Combination                             Score
+-----------------------------------------------------------------------
+Three-of-a-kind    Three dice with the same face           Sum all dice
+
+Four-of-a-kind     Four dice with the same face            Sum all dice
+
+Full house         One pair and a three-of-a-kind          25
+
+Small straight     A sequence of four dice                 30
+
+Large straight     A sequence of five dice                 40
+
+Yahtzee            Five dice with the same face            50
+
+Chance             May be used for any sequence of dice    Sum all dice
