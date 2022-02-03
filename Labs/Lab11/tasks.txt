@@ -1,0 +1,74 @@
+Tasks:
+
+Write a console application that computes and displays the total payroll for hourly employees at a company. Each employee is represented by a record in a file called payroll.txt. A record consists of the following:
+    - Employee name (last, first)
+    - Employee title (B or M)
+    - Hours worked
+    - Rate per hour
+
+You must read in all of the records from the file. These records are representative of a two week pay period, where the expected hours worked is ~80 hours. You may assume the file does not consist of more than 200 records. You will need to write an algorithm that traverses through the records and determines payment for each employee based on the following:
+    Basic Employee (title B):
+        - Payment = hours worked * rate per hour (excluding overtime)
+        - Overtime = 1.5 * rate per hour (for each hour over 40 hours worked per week)
+        - Total payment = payment + overtime
+    Manager (title M):
+        - Payment = hours worked * rate per hour (excluding overtime)
+        - Overtime = 1.8 * rate per hour (for each hour over 40 hours worked per week)
+        - Total payment = payment + overtime
+
+You will need to write the following information to another file called paid.txt:
+    - Total payroll (sum of all employees’ total payments)
+    - Average total payment
+    - Max total payment
+    - Min total payment
+
+Design Requirements:
+For this problem you must define the following struct type:
+
+typedef struct employee
+{
+    char name[100];      // employee's name - last, first
+    char title;          // title 'B' or 'M'
+    double hours_worked; // total number of hours worked
+    double payrate;      // pay rate per hour
+    double payment;      // total payment for the pay period – you will compute!
+} Employee;
+
+You must also define an array of Employees that contains a maximum of 200 employee profiles. For example,
+Employee payroll[200]; // the input file may not exceed 200 employee records
+
+You must also complete the following:
+    - Open payroll.txt for mode read
+    - Read all records in payroll.txt and store them into the array of Employees
+    - Compute the payment for each employee based on the title, number of hours worked, and pay rate – store the payment back into the Employee in the array
+    - Compute the total or sum of payments for all employees
+    - Compute the average payment per employee
+    - Compute the maximum payment
+    - Compute the minimum payment
+    - Open paid.txt for mode write
+    - Write the total, average, maximum, and minimum payments to paid.txt
+    - Close payroll.txt and paid.txt
+
+Sample payroll.txt File:
+    Smith, Susan
+    B
+    80.0
+    17.76
+    Sanders, Fred
+    M
+    87.25
+    23.45
+    Kerr, Heidi
+    M
+    80.0
+    47.86
+    Russo, Rick
+    B
+    83.75
+    12.15
+
+Sample paid.txt File (printed to hundredths):
+    Total: $8471.97
+    Average: $2117.99
+    Max: $3828.80
+    Min: $1040.34

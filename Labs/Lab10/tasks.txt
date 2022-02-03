@@ -1,0 +1,37 @@
+Tasks:
+
+1.
+    Adapted from Exercise 8.11 in Deitel & Deitel C How to Program. Write a program that uses random number generation to create sentences. The program should use four arrays of pointers to chars called article, noun, verb, and preposition. The program should create a sentence by selecting a word at random from each array in the following order: article, noun, verb, preposition, article, and noun. As each word is picked, it should be concatenated to the previous words in an array large enough to hold the entire sentence. The words should be separated by spaces. When the final sentence is output, it should start with a capital letter and end with an exclamation mark (!). The program should generate 20 such sentences. The arrays should be filled as follows: The article array should contain "the", "a", "one", "some", and "any"; the noun array should contain "boy", "girl", "dog", "town", and "car"; the verb array should contain "drove", "jumped", "ran", "walked", and "skipped"; the preposition array should contain "to", "from", "over", "under", and "on". You may add other strings to each one of these arrays if you wish!
+
+2.
+(a)
+    Write a two-player interactive game to play Tic Tac Toe. The game board for Tic Tac Toe will be represented by a 2-Dimensional array of structs. The underlying game board struct should be represented as follows:
+
+    typedef struct coordinate
+    {
+        int row;
+        in column;
+    } Coordinate;
+
+    typedef struct cell
+    {
+        int occupied; // 1 if an X or O is in this cell; 0 otherwise
+        char symbol; // X for one player, O for the other player
+        Coordinate location; // A struct defined above, which represents the position of the cell within the game board
+    } Cell;
+
+    The Tic Tac Toe game board consists of a total of n x n Cells, where n is selected by the user of the game. Your program should randomly select who goes first, X or O. Once a player has been chosen, your program should prompt the player for a position (row and column) in which to draw his/her symbol. Players continue to alternate moves until either a winner has been determined or a "scratch" game occurs. A player wins if his/her symbols align with n in a row diagonally, vertically, or horizontally. A "scratch" game occurs if all cells on the board are occupied and no player aligned n of his/her symbols in a row.
+
+    The program should prompt the users to determine if they want to play another game. Keep track of each player’s number of wins, losses, and total game played in a struct defined as follows:
+
+    typedef struct game_info
+    {
+        int wins;
+        int losses;
+        int total_games_played.
+    } Game_info;
+
+    Use functions where appropriate.
+
+(b)
+    Make one of the players the computer. Introduce some basic artificial intelligence so that the computer makes "educated" moves.
